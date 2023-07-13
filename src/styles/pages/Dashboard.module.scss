@@ -1,0 +1,32 @@
+.Dashboard {
+  @include flexbox-vrt(10px);
+  padding: $padding-gen;
+
+  .italic {
+    font-style: italic;
+  }
+
+  .userInfo {
+    padding: $padding-gen;
+
+    .info {
+      span {
+        font-weight: bold;
+      }
+    }
+
+    &.bank {
+      visibility: hidden;
+    }
+
+    &.visible {
+      visibility: visible;
+    }
+  }
+
+  .link {
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+}

@@ -1,0 +1,69 @@
+.Locations {
+  @include flexbox-vrt(20px);
+  padding: $padding-gen;
+
+  .text {
+    width: 100%;
+    @include flexbox-vrt(10px);
+
+    .price {
+      font-size: 1.5rem;
+      @extend %center-content;
+      gap: 5px;
+
+      span {
+        font-size: 2rem;
+        font-weight: bold;
+      }
+    }
+
+    .description {
+      font-style: italic;
+    }
+
+    .amenities {
+      @include flexbox-hrz(10px);
+      flex-wrap: wrap;
+
+      .amenity {
+        @extend %center-content;
+        text-align: center;
+        border: 1px solid;
+        padding: $padding-sm;
+        border-radius: $border-radius-1;
+      }
+    }
+  }
+
+  .pics {
+    width: 100%;
+
+    img {
+      width: 100%;
+      height: auto;
+      max-height: 300px;
+      object-fit: cover;
+    }
+  }
+
+  .reviews {
+    @include flexbox-vrt(20px);
+    padding: $padding-gen;
+    width: 100%;
+    max-height: 500px;
+    overflow-y: auto;
+
+    .review {
+      display: flex;
+      flex-direction: column;
+      border-radius: $border-radius-2;
+      box-shadow: $elevation-small;
+      padding: $padding-gen;
+
+      .reviewAuthor {
+        font-style: italic;
+        text-align: right;
+      }
+    }
+  }
+}

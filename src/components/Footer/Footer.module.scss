@@ -1,0 +1,33 @@
+.footer {
+  height: 100px;
+  margin-top: auto;
+  background-color: #444444;
+  color: white;
+  @include flexbox-hrz(5px);
+  flex-wrap: wrap;
+
+  .copyright {
+    width: 100%;
+    text-align: center;
+  }
+
+  .links {
+    width: 100%;
+    @include flexbox-hrz(20px);
+    list-style-type: none;
+
+    .link {
+      color: white;
+
+      a:link,
+      a:visited {
+        text-decoration: none;
+        color: white;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

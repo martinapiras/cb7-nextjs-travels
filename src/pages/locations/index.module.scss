@@ -1,0 +1,10 @@
+.Locations {
+  height: 100vh;
+  overflow-y: auto;
+  padding: $padding-gen;
+  @include flexbox-vrt(30px);
+
+  @include lg {
+    @include flexbox-hrz(30px);
+  }
+}

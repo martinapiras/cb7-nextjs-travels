@@ -1,0 +1,113 @@
+.Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  padding: $padding-gen;
+  box-shadow: $elevation-small;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  background-color: #fff;
+
+  .logo {
+    width: 50%;
+
+    @include lg {
+      width: 20%;
+    }
+  }
+
+  .navigation {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+
+    .hamburgerMenu {
+      @include tablet-hidden;
+      @include desktop-hidden;
+      width: 50px;
+      height: 50px;
+      @include flexbox-vrt(5px);
+      padding: 5px;
+      cursor: pointer;
+
+      .line {
+        width: 100%;
+        height: 5px;
+        background-color: #444;
+        border-radius: $border-radius-2;
+      }
+    }
+
+    .mobileNav {
+      @include tablet-hidden;
+      @include desktop-hidden;
+
+      position: absolute;
+      width: 200px;
+      background-color: #fff;
+      height: fit-content;
+      border: 1px solid #fff;
+      top: 100px;
+      right: 0;
+      visibility: hidden;
+      opacity: 0;
+      transition: opacity 0.35s ease-in-out;
+      box-shadow: $elevation-small;
+
+      &.open {
+        visibility: visible;
+        opacity: 1;
+      }
+
+      .mobileNavLinks {
+        width: 100%;
+        @include flexbox-vrt(0);
+        list-style-type: none;
+        padding: 0;
+
+        a {
+          width: 100%;
+          text-decoration: none;
+          color: #fff;
+          border-bottom: 1px solid #fff;
+
+          &:last-of-type {
+            border-bottom: none;
+          }
+
+          & .mobileNavLink {
+            width: 100%;
+            padding: $padding-sm;
+            background-color: #444;
+            text-align: center;
+            cursor: pointer;
+            transition: background-color 0.35s ease;
+
+            &:hover {
+              background-color: #4444448f;
+            }
+          }
+        }
+      }
+    }
+
+    .navLinks {
+      width: 100%;
+      @include mobile-hidden;
+      @include flexbox-hrz(10px);
+      list-style-type: none;
+      padding: 0;
+      flex-wrap: wrap;
+
+      a {
+        text-decoration: none;
+      }
+    }
+
+    @include lg {
+      width: 80%;
+    }
+  }
+}

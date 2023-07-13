@@ -1,0 +1,27 @@
+.Contacts {
+  padding: $padding-gen;
+
+  .container {
+    width: 100%;
+    padding: $padding-gen;
+    @include flexbox-vrt(10px);
+
+    .contact {
+      width: 200px;
+      height: 100px;
+      border: 2px solid;
+      border-radius: $border-radius-2;
+      padding: $padding-sm;
+      text-align: center;
+      @include flexbox-vrt(5px);
+
+      * {
+        text-decoration: none;
+      }
+    }
+
+    @include lg {
+      @include flexbox-hrz(10px);
+    }
+  }
+}
