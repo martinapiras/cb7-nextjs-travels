@@ -10,7 +10,7 @@ export default function () {
   const [location, setLocation] = useState({});
 
   useEffect(() => {
-    setId(router.asPath.slice(11));
+    setId(router.query.id);
 
     if (id && id !== "[id]") {
       setLocation(roomList.filter((item) => item.id == id)[0]);

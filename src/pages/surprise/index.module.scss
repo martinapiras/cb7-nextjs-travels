@@ -1,0 +1,14 @@
+.surprise {
+  width: 100%;
+  padding: $padding-gen;
+
+  .wrapper {
+    padding: $padding-gen;
+    @include flexbox-vrt(30px);
+
+    @include lg {
+      @include flexbox-hrz(30px);
+      flex-wrap: wrap;
+    }
+  }
+}

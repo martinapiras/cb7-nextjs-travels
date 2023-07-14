@@ -1,3 +1,12 @@
+## Risposta Avanzato 14/07/2023:
+
+La principale differenza fra CSR e SSR è che nel Server-Side Rendering, quando l'utente cerca di accedere a una pagina, quella verrà interamente renderizzata sul server prima di essere mostrata all'utente nella sua forma finale, mentre nel Client-Side Rendering l'HTML della pagina verrà prima renderizzato sul client e solo in seguito si eseguirà il JavaScript presente.
+
+Il SSR sfrutta la funzione `getServerSideProps` per poter comunicare con il server; questa funzione può contenere dati che non verranno trasmessi al front-end.  
+Il CSR permette di effettuare chiamate alle API tramite l'uso di `useEffect` solo dopo che la pagina è stata renderizzata.
+
+##
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
