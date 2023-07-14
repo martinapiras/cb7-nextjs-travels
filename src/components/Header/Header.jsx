@@ -37,6 +37,12 @@ const Header = () => {
             <Link href="/locations">
               <li className={styles.mobileNavLink}>Locations</li>
             </Link>
+            <Link href="/products">
+              <li className={styles.mobileNavLink}>Products</li>
+            </Link>
+            <Link href="/surprise">
+              <li className={styles.mobileNavLink}>Surprise</li>
+            </Link>
             {isLoggedIn ? (
               <>
                 <Link href="/login" onClick={handleLogOut}>
@@ -56,6 +62,12 @@ const Header = () => {
         <ul className={styles.navLinks}>
           <Link href="/locations">
             <li className={styles.navLink}>Locations</li>
+          </Link>
+          <Link href="/products">
+            <li className={styles.navLink}>Products</li>
+          </Link>
+          <Link href="/surprise">
+            <li className={styles.navLink}>Surprise</li>
           </Link>
           {isLoggedIn ? (
             <>

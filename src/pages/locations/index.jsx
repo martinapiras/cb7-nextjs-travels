@@ -11,7 +11,12 @@ export default function () {
   return (
     <div className={styles.Locations}>
       {roomList?.map((item) => (
-        <Card key={item.id} data={item} onHandleClick={onHandleClick} />
+        <Card
+          key={item.id}
+          data={item}
+          onHandleClick={onHandleClick}
+          type="locations"
+        />
       ))}
     </div>
   );
