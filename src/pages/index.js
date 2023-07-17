@@ -2,8 +2,13 @@ import Head from "next/head";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Summary from "@/components/Summary";
+import { useContext } from "react";
+import { QuotesContext } from "@/layouts/DefaultLayout";
+import styles from "@/styles/Home.module.scss";
 
 export default function Home() {
+  const quotes = useContext(QuotesContext);
+
   return (
     <>
       <Head>
@@ -16,6 +21,16 @@ export default function Home() {
       <Hero />
       <Summary />
       <Summary reverse />
+      <hr />
+      <h3>Our daily quotes</h3>
+      <div className={styles.quotes}>
+        {quotes?.map((quote) => (
+          <div key={quote.id}>
+            <blockquote>{quote.quote}</blockquote>
+            <p>– {quote.author}</p>
+          </div>
+        ))}
+      </div>
     </>
   );
 }
