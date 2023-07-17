@@ -1,0 +1,12 @@
+.quotes {
+  padding: $padding-gen;
+  @include flexbox-vrt(20px);
+
+  div {
+    width: 100%;
+
+    p {
+      padding-left: 40px;
+    }
+  }
+}
